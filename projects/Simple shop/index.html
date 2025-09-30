@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop – Best Online Deals</title>
+    <meta name="description"
+        content="Shop affordable clothing, accessories, electronics, and more. High-quality products at unbeatable prices.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Left side: logo + links -->
+            <div class="nav-left">
+                <h1 class="logo">My Shop</h1>
+                <ul id="navLinks" class="nav-links">
+                    <li><a href="#landing">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right side: Cart -->
+            <div class="nav-right">
+                <button id="toggleCart" class="cart-btn">
+                    🛒 Cart (<span id="cartCount">0</span>)
+                </button>
+                <button id="hamburger" class="hamburger">☰</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Landing Section -->
+    <section id="landing" class="landing" aria-labelledby="landing-title">
+        <div class="landing-content">
+            <h1 id="landing-title">Welcome to My Shop</h1>
+            <p>Find the best deals on clothing, accessories, and more!</p>
+            <button id="shopNow" aria-label="Scroll to shop section">🛍️ Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <main id="shop" role="main" aria-labelledby="shop-title">
+        <h2 id="shop-title" class="section-title">Shop Our Products</h2>
+
+        <div class="sort-controls" aria-label="Product Sorting Options">
+            <button id="sortLowHigh" aria-label="Sort products from lowest to highest price">Sort: Low → High</button>
+            <button id="sortHighLow" aria-label="Sort products from highest to lowest price">Sort: High → Low</button>
+        </div>
+
+        <section id="products" class="product-container" aria-live="polite"></section>
+        <nav id="pagination" class="pagination" aria-label="Product pages"></nav>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <aside id="cart" class="hidden" aria-labelledby="cart-title" role="complementary">
+        <h2 id="cart-title">Your Cart</h2>
+        <ul id="cartItems" aria-label="Cart Items List"></ul>
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <button id="clearCart" aria-label="Clear all items from cart">Clear Cart</button>
+        <button id="closeCart" aria-label="Close cart">Close</button>
+    </aside>
+
+    <!-- Notification -->
+    <div id="notification" class="notification hidden" role="status" aria-live="assertive"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
